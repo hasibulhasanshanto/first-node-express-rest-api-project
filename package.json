@@ -1,0 +1,19 @@
+{
+  "name": "first-express-api-project",
+  "version": "1.0.0",
+  "description": "This is my first express rest API project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Hasibul Hasan Shanto <kajal.shanto@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

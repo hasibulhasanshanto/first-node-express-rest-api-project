@@ -3,8 +3,12 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require("dotenv/config");
-
 app.use(bodyParser.json());
+
+// Swagger Docs
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocumentation = require("./doc/documentation");
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocumentation));
 
 // Middlewares
 // Import Routes
@@ -30,7 +34,7 @@ mongoose
   });
 
 // Start the server
-app.listen(3000, () => {
+app.listen(process.env.APP_ROOT, () => {
   console.log("Server started.");
   console.log("APP_URL: " + process.env.APP_URL);
 });
